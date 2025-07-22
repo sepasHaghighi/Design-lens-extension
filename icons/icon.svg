@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Square frame corners -->
+  <path fill="#00796b" d="M0,0 H32 V16 H16 V32 H0 Z"/>
+  <path fill="#00796b" d="M96,0 H128 V32 H112 V16 H96 Z"/>
+  <path fill="#00796b" d="M0,96 H16 V112 H32 V128 H0 Z"/>
+  <path fill="#00796b" d="M112,96 V112 H96 V128 H128 V96 Z"/>
+  
+  <!-- Circle with lens -->
+  <circle cx="64" cy="64" r="48" fill="#00796b"/>
+  <circle cx="64" cy="64" r="40" fill="#26a69a"/>
+  <path fill="#ffffff" d="M64,24 A40,40 0 0 1 104,64 L84,64 A20,20 0 0 0 64,44 Z"/>
+</svg> 
