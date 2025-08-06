@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Design Lens</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&icon_names=info" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Design Lens</h1>
+      <span class="caption">By Sepas Haghighi</span>
+    </div>
+
+    <div class="auth-section">
+      <div class="auth-status">
+        <span class="auth-warning">
+          <span class="material-icons">warning</span>
+          Not authenticated with Figma
+        </span>
+        <button class="auth-button">Authenticate</button>
+        <button class="sign-out-button">Sign Out</button>
+      </div>
+      <div class="auth-form" style="display: none;">
+        <div class="form-group">
+          <label>Figma Personal Access Token:</label>
+          <input type="text" class="token-input" placeholder="Enter your Figma personal access token">
+          <div class="token-help">
+            <a href="https://www.figma.com/developers/api#access-tokens" target="_blank">
+              Create one in Figma in "Account Settings" in "Personal Access Tokens"
+            </a>
+          </div>
+        </div>
+        <div class="button-group">
+          <button class="submit-token">Submit Token</button>
+          <button class="cancel-token">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-section">
+      <div class="form-group">
+
+        <div class="url-input-group">
+          <input type="text" placeholder="Figma file link" class="url-input" disabled>
+          <button type="button" class="paste-inline-button" disabled>
+            <span class="button-text"><span class="material-icons">content_paste</span></span>
+            <span class="success-message" style="display: none;">
+              <span class="material-icons">check_circle</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="select-wrapper">
+          <div class="select-prefix">Page</div>
+          <select class="page-select" disabled>
+            <option>Select page</option>
+          </select>
+          <button type="button" class="reload-button reload-pages-button" disabled>
+            <span class="material-icons">refresh</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="select-wrapper">
+          <div class="select-prefix">Frame</div>
+          <select class="frame-select" disabled>
+            <option>Select frame</option>
+          </select>
+          <button type="button" class="reload-button reload-frames-button" disabled>
+            <span class="material-icons">refresh</span>
+          </button>
+        </div>
+
+        <div class="frame-preview" style="display: none;">
+          <h3>Preview</h3>
+          <div class="preview-container">
+            <div class="preview-loading" style="display: none;">
+              <span class="material-icons">refresh</span>
+              Loading preview...
+            </div>
+            <img class="preview-image" alt="Frame preview" />
+          </div>
+        </div>
+      </div>
+
+      <button class="compare-button" disabled>Compare with Current Page</button>
+      
+      <div class="opacity-control" style="display: none;">
+        <div class="opacity-label">
+          <span>Overlay Opacity:</span>
+          <span class="opacity-value">70%</span>
+        </div>
+        <input type="range" min="0" max="100" value="70" class="opacity-slider">
+      </div>
+
+      <div class="position-control" style="display: none;">
+        <span class="position-label">Overlay Position:</span>
+        <div class="position-container">
+          <label for="x-position">X:</label>
+          <input name="x-position" type="number" min="0" value="0" class="position-input">
+          <label for="y-position">Y:</label>
+          <input name="y-position" type="number" min="0" value="0" class="position-input">
+        </div>
+        <span class="hint"><span class="material-symbols-outlined">
+          info
+          </span> Hold shift to increment/decrement by 10 </span>
+      </div>
+    </div>
+
+  </div>
+  <script src="compare.js" type="module"></script>
+  <script src="popup.js" type="module"></script>
+</body>
+
+</html>

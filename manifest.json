@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Design Lens",
+  "version": "1.0",
+  "description": "Compare Figma designs with web pages",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "sidePanel",
+    "downloads",
+    "clipboardRead"
+  ],
+  "host_permissions": [
+    "https://api.figma.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "minimum_chrome_version": "114"
+}
